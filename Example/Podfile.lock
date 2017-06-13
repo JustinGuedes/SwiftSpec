@@ -1,0 +1,16 @@
+PODS:
+  - SwiftSpec (0.1.0)
+
+DEPENDENCIES:
+  - SwiftSpec (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftSpec:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwiftSpec: 66e7ad2b5de798ecf32d556d173d980beb07e6e7
+
+PODFILE CHECKSUM: e4ed7735eac745de92473a8cb473611bbdbe28c3
+
+COCOAPODS: 1.2.1
