@@ -1,11 +1,12 @@
 //
-//  AnySpecification.swift
+//  NotSpecification.swift
 //  SwiftSpec
 //
 //  Created by Justin Guedes on 2017/06/13.
 //
 
-public struct AnySpecification<Spec: Specification>: Specification {
+/// Specification to negate the result of the passed-in specification.
+public struct NotSpecification<Spec: Specification>: Specification {
     
     private let spec: Spec
     
@@ -14,7 +15,7 @@ public struct AnySpecification<Spec: Specification>: Specification {
     }
     
     public func isSatisfied(by object: Spec.Object) -> Bool {
-        return spec.isSatisfied(by: object)
+        return !spec.isSatisfied(by: object)
     }
     
 }

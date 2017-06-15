@@ -1,5 +1,7 @@
 PODS:
-  - SwiftSpec (0.1.0)
+  - SwiftSpec (0.1.0):
+    - SwiftSpec/All (= 0.1.0)
+  - SwiftSpec/All (0.1.0)
 
 DEPENDENCIES:
   - SwiftSpec (from `../`)
@@ -9,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SwiftSpec: 66e7ad2b5de798ecf32d556d173d980beb07e6e7
+  SwiftSpec: 86aefa3ae7d249bedd95fa907e645de980602f1e
 
 PODFILE CHECKSUM: e4ed7735eac745de92473a8cb473611bbdbe28c3
 

@@ -23,7 +23,7 @@ public extension Specification {
     ///
     /// - Parameter spec: The specification to 'and' with.
     /// - Returns: Concatenated specification that and's both specifications.
-    func and<Spec>(_ spec: Spec) -> AnySpecification<AndSpecification<Self, Spec>> {
+    func and<Spec: Specification>(_ spec: Spec) -> AnySpecification<Object> where Spec.Object == Object {
         return AnySpecification(AndSpecification(self, spec))
     }
     
@@ -32,12 +32,12 @@ public extension Specification {
     ///
     /// - Parameter spec: The specification to 'or' with.
     /// - Returns: Concatentated specification that or's both specifications.
-    func or<Spec>(_ spec: Spec) -> AnySpecification<OrSpecification<Self, Spec>> {
+    func or<Spec: Specification>(_ spec: Spec) -> AnySpecification<Object> where Spec.Object == Object {
         return AnySpecification(OrSpecification(self, spec))
     }
     
     /// Returns a not'ed specification that just returns the opposite result of the original specification.
-    var not: AnySpecification<NotSpecification<Self>> {
+    var not: AnySpecification<Object> {
         return AnySpecification(NotSpecification(self))
     }
     
