@@ -1,9 +1,11 @@
 PODS:
+  - SwiftLint (0.18.1)
   - SwiftSpec (0.1.0):
     - SwiftSpec/All (= 0.1.0)
   - SwiftSpec/All (0.1.0)
 
 DEPENDENCIES:
+  - SwiftLint
   - SwiftSpec (from `../`)
 
 EXTERNAL SOURCES:
@@ -11,8 +13,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
+  SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
   SwiftSpec: 86aefa3ae7d249bedd95fa907e645de980602f1e
 
-PODFILE CHECKSUM: e4ed7735eac745de92473a8cb473611bbdbe28c3
+PODFILE CHECKSUM: 3dd9aeb836bd0c81ef76aef09dd643ab06169829
 
 COCOAPODS: 1.2.1

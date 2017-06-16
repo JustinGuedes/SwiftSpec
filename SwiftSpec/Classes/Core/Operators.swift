@@ -9,11 +9,15 @@ public func ==<Spec: Specification>(_ first: Spec, _ second: Spec.Object) -> Boo
     return first.isSatisfied(by: second)
 }
 
-public func &&<FirstSpec: Specification, SecondSpec: Specification>(_ first: FirstSpec, _ second: SecondSpec) -> AnySpecification<FirstSpec.Object> where FirstSpec.Object == SecondSpec.Object {
+public func &&<FirstSpec: Specification, SecondSpec: Specification>
+        (_ first: FirstSpec, _ second: SecondSpec) -> AnySpecification<FirstSpec.Object>
+        where FirstSpec.Object == SecondSpec.Object {
     return AnySpecification(AndSpecification(first, second))
 }
 
-public func ||<FirstSpec: Specification, SecondSpec: Specification>(_ first: FirstSpec, _ second: SecondSpec) -> AnySpecification<FirstSpec.Object> where FirstSpec.Object == SecondSpec.Object {
+public func ||<FirstSpec: Specification, SecondSpec: Specification>
+        (_ first: FirstSpec, _ second: SecondSpec) -> AnySpecification<FirstSpec.Object>
+        where FirstSpec.Object == SecondSpec.Object {
     return AnySpecification(OrSpecification(first, second))
 }
 

@@ -190,6 +190,7 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftSpec_Example" */;
 			buildPhases = (
 				9CB404B320B6C0FEEF171AA9 /* [CP] Check Pods Manifest.lock */,
+				8C14E6441EF3C9EA00A69866 /* Run SwiftLint */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -210,6 +211,7 @@
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftSpec_Tests" */;
 			buildPhases = (
 				55D2F75E0DDB05696418DDEA /* [CP] Check Pods Manifest.lock */,
+				8C14E6431EF3C9C400A69866 /* Run SwiftLint */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -347,6 +349,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftSpec_Tests/Pods-SwiftSpec_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8C14E6431EF3C9C400A69866 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../SwiftSpec\n\"${PODS_ROOT}\"/SwiftLint/swiftlint autocorrect\n\"${PODS_ROOT}\"/SwiftLint/swiftlint\ncd -";
+		};
+		8C14E6441EF3C9EA00A69866 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../SwiftSpec\n\"${PODS_ROOT}\"/SwiftLint/swiftlint autocorrect\n\"${PODS_ROOT}\"/SwiftLint/swiftlint\ncd -";
+		};
 		9CB404B320B6C0FEEF171AA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +495,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -505,6 +536,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

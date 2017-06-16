@@ -9,11 +9,11 @@
 import SwiftSpec
 
 struct DummySpecification: Specification {
-    
+
     let satisfied: Bool
-    
+
     func isSatisfied(by object: Any) -> Bool {
         return satisfied
     }
-    
+
 }

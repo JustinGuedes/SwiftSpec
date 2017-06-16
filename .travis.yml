@@ -12,11 +12,8 @@ before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=Example
 
-install:
-- ./swift-lint.sh
-
 script:
-- xcodebuild -workspace Example/SwiftSpec.xcworkspace -scheme SwiftSpec-Example -destination 'platform=iOS Simulator,name=iPhone 7'  ONLY_ACTIVE_ARCH=YES clean test | xcpretty
+- xcodebuild -workspace Example/SwiftSpec.xcworkspace -scheme SwiftSpec-Example -destination 'platform=iOS Simulator,name=iPhone 7'  ONLY_ACTIVE_ARCH=YES clean test
 - pod lib lint
 
 after_success:
