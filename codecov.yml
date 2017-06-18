@@ -9,6 +9,8 @@ coverage:
   range: 70...100
   ignore:
     - "Example"
+    - "SwiftSpec/Classes/Core/Specification.swift"
+    - "SwiftSpec/Classes/Core/Operators.swift"
 
   status:
     # Learn more at https://codecov.io/docs#yaml_default_commit_status
