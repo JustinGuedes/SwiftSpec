@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftSpec'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'Specification pattern in swift.'
   s.description      = <<-DESC
 SwiftSpec was written to make implementing the specification pattern easier. Provides convenient specifications for numbers, strings, etc.
