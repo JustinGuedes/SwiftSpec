@@ -10,7 +10,7 @@ podfile: Example/Podfile
 
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
-- pod install --project-directory=Example
+- pod update --project-directory=Example
 
 script:
 - xcodebuild -workspace Example/SwiftSpec.xcworkspace -scheme SwiftSpec-Example -destination 'platform=iOS Simulator,name=iPhone 7'  ONLY_ACTIVE_ARCH=YES clean test
